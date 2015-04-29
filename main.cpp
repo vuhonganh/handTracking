@@ -9,6 +9,7 @@ int main(int argc, char **argv)
   namedWindow("Hello");
   imshow("Hello", im);
 
+  //access a pixel value in image
   Point toPrint(25,46);
   cout << "im at (i,j) = " << im.at<Vec3b>(toPrint) << endl;
 
