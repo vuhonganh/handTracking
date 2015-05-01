@@ -1,0 +1,28 @@
+#peut etre pkg-config a fait une patie des taches donc on ne doit pas creer des objets fichiers (.o)
+
+CXXFLAGS = `pkg-config --cflags opencv` -g -O2
+LDLIBS   = `pkg-config --libs opencv`
+
+CC  = gcc
+CXX = g++
+LD  = g++
+
+EXE  = exe
+
+SRCS = $(wildcard *.cpp)
+OBJS = $(SRCS: .cpp=.o)
+
+all: $(EXE)
+
+$(EXE): $(OBJS)
+	$(CXX) $^ $(LDLIBS) -o $@
+
+%.o: %.cpp %.h
+	$(CXX) -c $< $(CXXFLAGS) -o $@
+
+#%.cpp: %.h
+
+.PHONY: clean
+
+clean:
+	rm -rf $(EXE) *.o
