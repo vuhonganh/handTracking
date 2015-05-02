@@ -25,6 +25,7 @@ void on_trackbar(int , void *)
 int main(int argc, char **argv)
 {
   Mat img = imread("bg.jpg");
+  cout << "nb of channels of original image is " << img.channels() << endl;
   namedWindow("Trackbar app");
   Mat gray;
   cvtColor(img, gray, CV_RGB2GRAY);
