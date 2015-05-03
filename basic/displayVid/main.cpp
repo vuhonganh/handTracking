@@ -34,6 +34,7 @@ int main()
   namedWindow("Video");
    
   VideoWriter put;
+  //check if we can write a video
   bool writeVideo = writeVideoFromCap(cap, put);
 
   //play the video in a loop until it ends
