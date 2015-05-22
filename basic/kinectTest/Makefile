@@ -14,9 +14,6 @@ all: $(EXE)
 
 $(EXE): $(OBJS)
 
-run: $(EXE)
-	./$<
-
 %.cpp : %.h
 
 .PHONY: clean
