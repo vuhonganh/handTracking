@@ -171,8 +171,6 @@ def find_contour_hull(binary_image):
 
     return cnt, hull, hull_idx
 
-
-
 def draws_contour_hull(img, cnt, hull):
     #draws the image with only the contour and its convex hull
     drawing = np.zeros(img.shape, np.uint8)

@@ -1,0 +1,1 @@
+check section 4.5 Connectivity of book "A pratical introduction to CV with OpenCV Wiley"  

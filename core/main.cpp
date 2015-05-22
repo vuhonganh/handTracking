@@ -140,6 +140,40 @@ void on_high_thresh_trackbar(int, void *)
     }
 }
 
+/*
+def find_contour_hull(binary_image):
+    #find the contour
+    contours, hierarchy = cv2.findContours(binary_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    #search the maximum contour in the hierachy tree of contours
+    max_area = 0
+    ci = 0
+    for i in range(len(contours)):
+        cnt = contours[i]
+        area = cv2.contourArea(cnt)
+        if(area > max_area):
+            max_area = area
+            ci = i
+
+    cnt = contours[ci]
+    hull = cv2.convexHull(cnt)
+    hull_idx = cv2.convexHull(cnt, returnPoints = False)
+
+    return cnt, hull, hull_idx
+*/
+
+
+
+/*
+def draws_contour_hull(img, cnt, hull):
+    #draws the image with only the contour and its convex hull
+    drawing = np.zeros(img.shape, np.uint8)
+    cv2.drawContours(drawing, [cnt], 0, (0, 255, 0), 3)
+    cv2.drawContours(drawing, [hull], 0, (0, 0, 255), 3)
+    return drawing
+*/
+
+
 int main()
 {
 
@@ -175,7 +209,6 @@ int main()
         simple_preproscessing(0, 0);
         hsv_preprocessing(0, 0);
     }
-
 
     return 0;
 }
